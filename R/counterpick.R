@@ -8,6 +8,7 @@
 #' @export
 
 load(file="data/dat.RData")
+library(dplyr)
 
 counterpick <- function(dat, friendly, opponent, numPicks){
   n_opp <- length(opponent)
