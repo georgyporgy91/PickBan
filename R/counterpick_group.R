@@ -4,7 +4,7 @@
 #' @return the champion on friendly team with highest win rate
 #' @export
 
-
+library(dplyr)
 load(file="data/dat.RData")
 
 counterpick_group <- function(dat, friendly, opponent, numPicks = 1){
