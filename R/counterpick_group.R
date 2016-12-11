@@ -7,11 +7,11 @@
 
 load(file="data/dat.RData")
 
-counterpick_group <- function(dat, friendly, opponent, numPicks = 1){
+counterpick_group <- function(friendly, opponent, data= dat, numPicks = 1){
   n_opp <- length(opponent)
   n_fri <- length(friendly)
   gameid_opp <- c()
-  dat_rel <- dat
+  dat_rel <- data
   dat_rel$gameid_teamid <- paste(dat_rel$gameid,dat_rel$teamid,sep="_")
 
 
@@ -70,7 +70,8 @@ counterpick_group <- function(dat, friendly, opponent, numPicks = 1){
 
   #find highest win rate against opponent champions
   counter <- highestWinProb(dat_rel, 1) #changing this parameter to "numPicks" alters the algorithm to pick the highest 2 win rates simultaneously. Could lead to 2 of same role.
-  friendly <- c(friendly, counter)
-  print(friendly)
-  return(friendly)
+  #friendly <- c(friendly, counter)
+  #print(friendly)
+  #return(friendly)
+  return(counter)
 }
