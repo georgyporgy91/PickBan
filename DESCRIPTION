@@ -1,0 +1,11 @@
+Package: PickBan
+Type: Package
+Title: Pick Ban in LoL
+Version: 0.1.0
+Author: George Wang
+Maintainer: George Wang <georgyporgy91@gmail.com>
+Description: Suggests the best picks and bans in League of Legends (In
+    Development)
+License: MIT
+LazyData: TRUE
+RoxygenNote: 5.0.1
