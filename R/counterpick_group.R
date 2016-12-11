@@ -6,7 +6,6 @@
 
 
 load(file="data/dat.RData")
-library(dplyr)
 
 counterpick_group <- function(dat, friendly, opponent, numPicks = 1){
   n_opp <- length(opponent)
