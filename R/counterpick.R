@@ -10,7 +10,12 @@
 load(file="data/dat.RData")
 
 
-counterpick <- function(friendly, opponent, data= dat, numPicks = 1){
+counterpick <- function(input, data= dat, numPicks = 1){
+
+  newdata <- data.frame(input, stringsAsFactors = F)
+  friendly <- newdata$friendly
+  opponent <- newdata$opponent
+
   n_opp <- length(opponent)
   n_fri <- length(friendly)
   gameid_opp <- c()
