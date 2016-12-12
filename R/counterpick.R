@@ -13,8 +13,8 @@ load(file="data/dat.RData")
 counterpick <- function(input, data= dat, numPicks = 1){
 
   newdata <- data.frame(input, stringsAsFactors = F)
-  friendly <- na.omit(newdata$friendly)
-  opponent <- na.omit(newdata$opponent)
+  friendly <- newdata$friendly[!newdata$friendly == ""]
+  opponent <- newdata$opponent[!newdata$opponent == ""]
 
   n_opp <- length(opponent)
   n_fri <- length(friendly)
