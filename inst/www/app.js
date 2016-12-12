@@ -1,3 +1,5 @@
+//ocpu.seturl("http://public.opencpu.org/ocpu/github/gwang16/PickBan/R")
+
 $(document).ready(function() {
 
 	$("#submitbutton").click(function(e){
@@ -11,13 +13,13 @@ $(document).ready(function() {
 		//	t2 = "friendly"
 		//}
 
-		var mydata = [
-		{friendly : $("#b1").val(), opponent: $("#p1").val()},
+		var mydata = [{friendly : $("#b1").val(), opponent: $("#p1").val()}, 
 		{friendly : $("#b2").val(), opponent: $("#p2").val()},
 		{friendly : $("#b3").val(), opponent: $("#p3").val()},
 		{friendly : $("#b4").val(), opponent: $("#p4").val()},
-		{friendly : $("#b5").val(), opponent: $("#p5").val()}
-		];
+		{friendly : $("#b5").val(), opponent: $("#p5").val()}]
+
+		console.log(mydata)
 
 		var req = ocpu.rpc("counterpick", {input : mydata}, function(output){
 	    	$("tbody").empty();
