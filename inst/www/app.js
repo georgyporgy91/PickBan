@@ -16,7 +16,7 @@ $(document).ready(function() {
 		{friendly : $("#b2").val(), opponent: $("#p2").val()},
 		{friendly : $("#b3").val(), opponent: $("#p3").val()},
 		{friendly : $("#b4").val(), opponent: $("#p4").val()},
-		{friendly : $("#b5").val(), opponent: $("#p5").val()},
+		{friendly : $("#b5").val(), opponent: $("#p5").val()}
 		];
 
 		var req = ocpu.rpc("counterpick", {input : mydata}, function(output){
