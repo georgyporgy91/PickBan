@@ -1,9 +1,8 @@
 #' counterpick function
 #' @name counterpick
-#' @param dat data
-#' @param friendly vector of friendly champions
-#' @param opponent vector of enemy champions
-#' @param numPicks number of picks- default 1
+#' @param input a dataframe that contains two columns: friendly champions and enemy champions
+#' @param data default to model data
+#' @param numPicks default to 1
 #' @return the champion on friendly team with highest win rate
 #' @export
 
@@ -19,7 +18,7 @@ counterpick <- function(input, data= dat, numPicks = 1){
   n_opp <- length(opponent)
   n_fri <- length(friendly)
   gameid_opp <- c()
-  dat_rel <- dat
+  dat_rel <- data
 
   #Filter data set by including 1)opponent champions 2)ally champions 3) ensure that opponent champions are on the same team, and are opposite of ally champions
   for (i in 1:n_opp){

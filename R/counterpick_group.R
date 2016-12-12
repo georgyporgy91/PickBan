@@ -1,13 +1,20 @@
 #' counterpick_group function, except that when filtering games, instead of specific champions, now it's a group of champions. The purpose is to increase sample size.
 #' @name counterpick_group
-#' @param data, vector of friendly champions, vector of enemy champions, and number of picks- default 1
+#' @param input a dataframe that contains two columns: friendly champions and enemy champions
+#' @param data default to model data
+#' @param numPicks default to 1
 #' @return the champion on friendly team with highest win rate
 #' @export
 
 
 load(file="data/dat.RData")
 
-counterpick_group <- function(friendly, opponent, data= dat, numPicks = 1){
+counterpick_group <- function(input, data= dat, numPicks = 1){
+
+  newdata <- data.frame(input, stringsAsFactors = F)
+  friendly <- newdata$friendly[!newdata$friendly == ""]
+  opponent <- newdata$opponent[!newdata$opponent == ""]
+
   n_opp <- length(opponent)
   n_fri <- length(friendly)
   gameid_opp <- c()
