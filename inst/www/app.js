@@ -5,19 +5,21 @@ $(document).ready(function() {
 	$("#submitbutton").click(function(e){
 		e.preventDefault()
 		
-		//if($("input[name=team]:checked", "#myform").val() == 1){
-		//	t1 = "friendly"
-		//	t2 = "opponent"
-		//} else {
-		//	t1 = "opponent"
-		//	t2 = "friendly"
-		//}
+		console.log($(":checked").val() == "1")
 
-		var mydata = [{friendly : $("#b1").val(), opponent: $("#p1").val()}, 
-		{friendly : $("#b2").val(), opponent: $("#p2").val()},
-		{friendly : $("#b3").val(), opponent: $("#p3").val()},
-		{friendly : $("#b4").val(), opponent: $("#p4").val()},
-		{friendly : $("#b5").val(), opponent: $("#p5").val()}]
+		if($(":checked").val() == "1"){
+			var mydata = [{friendly : $("#b1").val(), opponent: $("#p1").val()}, 
+			{friendly : $("#b2").val(), opponent: $("#p2").val()},
+			{friendly : $("#b3").val(), opponent: $("#p3").val()},
+			{friendly : $("#b4").val(), opponent: $("#p4").val()},
+			{friendly : $("#b5").val(), opponent: $("#p5").val()}]
+		} else {
+			var mydata = [{friendly : $("#p1").val(), opponent: $("#b1").val()}, 
+			{friendly : $("#p2").val(), opponent: $("#b2").val()},
+			{friendly : $("#p3").val(), opponent: $("#b3").val()},
+			{friendly : $("#p4").val(), opponent: $("#b4").val()},
+			{friendly : $("#p5").val(), opponent: $("#b5").val()}]
+		}
 
 		console.log(mydata)
 
