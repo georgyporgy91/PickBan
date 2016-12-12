@@ -3,7 +3,7 @@ $(document).ready(function() {
 	$("#submitbutton").click(function(e){
 		e.preventDefault()
 		
-		if($("input[id=team]:checked").val() == 1){
+		if($("input[name=team]:checked").val() == 1){
 			t1 = "friendly"
 			t2 = "opponent"
 		} else {
