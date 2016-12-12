@@ -2,9 +2,7 @@ $(document).ready(function() {
 	$("#submitbutton").click(function(e){
 		e.preventDefault()
 		
-		var t1 = document.getElementById('b1').val();
-		var t2 = document.getElementById('p1').val();
-		var mydata = [{friendly : t1, opponent: t2}];
+		var mydata = [{friendly : document.getElementById("b1").val(), opponent: document.getElementById("p1").val()}];
 
 		var req = ocpu.rpc("counterpick", {input : mydata}, function(output){
 	    	$("tbody").empty();
