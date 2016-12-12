@@ -3,20 +3,20 @@ $(document).ready(function() {
 	$("#submitbutton").click(function(e){
 		e.preventDefault()
 		
-		if($("input[name=team]:checked").val() == 1){
-			t1 = "friendly"
-			t2 = "opponent"
-		} else {
-			t1 = "opponent"
-			t2 = "friendly"
-		}
+		//if($("input[name=team]:checked", "#myform").val() == 1){
+		//	t1 = "friendly"
+		//	t2 = "opponent"
+		//} else {
+		//	t1 = "opponent"
+		//	t2 = "friendly"
+		//}
 
 		var mydata = [
-		{t1 : $("#b1").val(), t2: $("#p1").val()},
-		{t1 : $("#b2").val(), t2: $("#p2").val()},
-		{t1 : $("#b3").val(), t2: $("#p3").val()},
-		{t1 : $("#b4").val(), t2: $("#p4").val()},
-		{t1 : $("#b5").val(), t2: $("#p5").val()},
+		{friendly : $("#b1").val(), opponent: $("#p1").val()},
+		{friendly : $("#b2").val(), opponent: $("#p2").val()},
+		{friendly : $("#b3").val(), opponent: $("#p3").val()},
+		{friendly : $("#b4").val(), opponent: $("#p4").val()},
+		{friendly : $("#b5").val(), opponent: $("#p5").val()},
 		];
 
 		var req = ocpu.rpc("counterpick", {input : mydata}, function(output){
