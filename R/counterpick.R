@@ -12,7 +12,7 @@ load(file="data/dat.RData")
 counterpick <- function(input, data= dat, numPicks = 1){
 
   newdata <- data.frame(input, stringsAsFactors = F)
-  friendly <- newdata$friendly[!newdata$friendly == ""]
+  friendly <- newdata$friendly[!newdata$friendly == ""] #empty fields are pass in as empty strings "", remove from analysis
   opponent <- newdata$opponent[!newdata$opponent == ""]
 
   n_opp <- length(opponent)
@@ -22,9 +22,10 @@ counterpick <- function(input, data= dat, numPicks = 1){
 
   #Filter data set by including 1)opponent champions 2)ally champions 3) ensure that opponent champions are on the same team, and are opposite of ally champions
   for (i in 1:n_opp){
+    #Pick out all games with opponent[i] champion
     gameid_opp <- dat_rel %>% filter(champion==opponent[i]) %>% select(gameid) %>% unique() %>% unlist()
     dat_rel <- dat_rel %>% filter(gameid %in% gameid_opp)
-
+    #Make sure opponent[i] champion is the same team as opponent[1] champion
     temp1 <- dat_rel %>% filter(champion==opponent[1]) %>% select(teamid)
     temp2 <- dat_rel %>% filter(champion==opponent[i]) %>% select(teamid)
     dat_rel <- dat_rel %>% filter(gameid %in% gameid_opp[temp1==temp2])

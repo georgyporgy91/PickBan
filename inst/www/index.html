@@ -11,41 +11,75 @@
   <script src="bootstrap.min.js"></script>
   <script src="opencpu.js"></script>
   <script src="app.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <h1>Pick Ban</h1>
+  <nav>
+    <a href="#">HOME</a>
+    <a href="#">ABOUT</a>
+    <a href="#">CONTACT</a>
+  </nav>
 
-  	<h3> Choose your side </h3>
-  	<form>
-  		<label class="radio-inline"><input type="radio" name="team" value="1">Blue</label>
-		<label class="radio-inline"><input type="radio" name="team" value="2">Purple</label>
-	</form>
+  <div class="sect">
+    <h1>LoL Pick-Ban Optimizer</h1>
+    <h3>v0.1</h3>
+  </div>
+        
+
+  <div class="jumbotron">
+      
+      <div class="container">
+        <h1>Pick-Ban Optimizer</h1>
+        <p>This project is an attempt to optimize the pick-ban process in League of Legends using statistics and machine-learning algorithms. The inputs are the current status of the pick-ban screen, and outputs are champions available for your next pick, ordered by predicted win rate. </p>
+      </div>
+
+  </div>
+
+  <div class="row">
+  	<form align="center">
+  		<div class="col-md-6">
+        <label class="radio-inline"><input type="radio" name="team" value="1">Blue Team</label>
+      </div>
+      <div class="col-md-6">
+		    <label class="radio-inline"><input type="radio" name="team" value="2">Purple Team</label>
+      </div>
+	  </form>
+  </div><BR> 
   	
-    <h3> Enter selected champions so far </h3>
-  	<h5> blue side </h5>
-  	<form>
-	  	Champion 1: <input type="text" id="b1"><br>
-	  	Champion 2: <input type="text" id="b2"><br>
-	  	Champion 3: <input type="text" id="b3"><br>
-	  	Champion 4: <input type="text" id="b4"><br>
-	  	Champion 5: <input type="text" id="b5"><br>
-	</form>
+  <div class="row">
+    <div class="col-md-6">
+      <!-- <h5 align="center"> blue side </h5>-->
+      <form class="form" align="center">
+          Champion 1: <input type="text" id="b1"><br>
+          Champion 2: <input type="text" id="b2"><br>
+          Champion 3: <input type="text" id="b3"><br>
+          Champion 4: <input type="text" id="b4"><br>
+          Champion 5: <input type="text" id="b5"><br>
+        </form>
+    </div> 
 
-	<h5> purple side </h5>
-  	<form>
-	  	Champion 1: <input type="text" id="p1"><br>
-	  	Champion 2: <input type="text" id="p2"><br>
-	  	Champion 3: <input type="text" id="p3"><br>
-	  	Champion 4: <input type="text" id="p4"><br>
-	  	Champion 5: <input type="text" id="p5"><br>
-	</form>
-  
-	<div class="text-center">
-        <button type="button" id="submitbutton" class="btn btn-primary btn-lg">Calculate</button>
+    <div class="col-md-6">
+      <!-- <h5 align="center"> purple side </h5> -->
+      <form class="form" align="center">
+          Champion 1: <input type="text" id="p1"><br>
+          Champion 2: <input type="text" id="p2"><br>
+          Champion 3: <input type="text" id="p3"><br>
+          Champion 4: <input type="text" id="p4"><br>
+          Champion 5: <input type="text" id="p5"><br>
+      </form>
     </div>
-
+  </div> 
+  
+  <p>
+    <div class="text-center">
+      <button type="button" id="pick-indiv" class="btn btn-lg btn-default">Individual</button>
+      <button type="button" id="pick-group" class="btn btn-lg btn-primary">Group</button>
+      <button type="button" id="pick-rl" class="btn btn-lg btn-success">RL</button>
+    </div>
+  </p>
+	
   <table class="table table-bordered">
     <thead>
       <tr><th>champion</th><th>pwin</th><th>numGames</th></tr>

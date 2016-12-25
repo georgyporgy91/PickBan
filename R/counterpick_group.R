@@ -19,7 +19,7 @@ counterpick_group <- function(input, data= dat, numPicks = 1){
   n_fri <- length(friendly)
   gameid_opp <- c()
   dat_rel <- data
-  dat_rel$gameid_teamid <- paste(dat_rel$gameid,dat_rel$teamid,sep="_")
+  dat_rel$gameid_teamid <- paste(dat_rel$gameid, dat_rel$teamid, sep="_")
 
 
   #Filter data set by including 1)opponent champions 2)ally champions 3) ensure that opponent champions are on the same team, and are opposite of ally champions
