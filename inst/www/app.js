@@ -1,4 +1,4 @@
-// ocpu.seturl("http://public.opencpu.org/ocpu/github/gwang16/PickBan/R")
+//ocpu.seturl("http://public.opencpu.org/ocpu/github/gwang16/PickBan/R")
 
 $(document).ready(function() {
 

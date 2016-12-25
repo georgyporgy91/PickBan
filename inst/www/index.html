@@ -29,27 +29,26 @@
         
 
   <div class="jumbotron">
-      
       <div class="container">
         <h1>Pick-Ban Optimizer</h1>
         <p>This project is an attempt to optimize the pick-ban process in League of Legends using statistics and machine-learning algorithms. The inputs are the current status of the pick-ban screen, and outputs are champions available for your next pick, ordered by predicted win rate. </p>
+        <p>Three methods of calculation are provided: Individual (filter by specific champions), Group (filter by groups of champions for larger sample size), and RL (Reinforcement Learning, work in progress). </p>
       </div>
-
   </div>
 
   <div class="row">
   	<form align="center">
-  		<div class="col-md-6">
+  		<div class="col-xs-6 col-md-6">
         <label class="radio-inline"><input type="radio" name="team" value="1">Blue Team</label>
       </div>
-      <div class="col-md-6">
+      <div class="col-xs-6 col-md-6">
 		    <label class="radio-inline"><input type="radio" name="team" value="2">Purple Team</label>
       </div>
 	  </form>
   </div><BR> 
   	
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-xs-6 col-md-6">
       <!-- <h5 align="center"> blue side </h5>-->
       <form class="form" align="center">
           Champion 1: <input type="text" id="b1"><br>
@@ -60,7 +59,7 @@
         </form>
     </div> 
 
-    <div class="col-md-6">
+    <div class="col-xs-6 col-md-6">
       <!-- <h5 align="center"> purple side </h5> -->
       <form class="form" align="center">
           Champion 1: <input type="text" id="p1"><br>
@@ -80,6 +79,7 @@
     </div>
   </p>
 	
+
   <table class="table table-bordered">
     <thead>
       <tr><th>champion</th><th>pwin</th><th>numGames</th></tr>
