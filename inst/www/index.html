@@ -30,84 +30,88 @@
 
   <div class="jumbotron">
       <div class="container">
-        <h1>Pick-Ban Optimizer</h1>
+        
         <p>This project is an attempt to optimize the pick-ban process in League of Legends using statistics and machine-learning algorithms. The inputs are the current status of the pick-ban screen, and outputs are champions available for your next pick, ordered by predicted win rate. </p>
         <p>Three methods of calculation are provided: Individual (filter by specific champions), Group (filter by groups of champions for larger sample size), and RL (Reinforcement Learning, work in progress). </p>
+        <p>Pick the color of your team, input one of the following champions names, and click on one of the three buttons to display results. </p>
+        "Aatrox", "Ahri", "Akali", "Alistar", "Amumu", "Anivia", "Annie", "Ashe",
+        "Azir", "Bard", "Blitzcrank", "Brand", "Braum", "Caitlyn", "Cassiopeia",
+        "Chogath", "Corki", "Darius", "Diana", "Draven", "DrMundo", "Ekko", "Elise",
+        "Evelynn", "Ezreal" "FiddleSticks", "Fiora", "Fizz", "Galio", "Gangplank",
+        "Garen", "Gnar", "Gragas", "Graves", "Hecarim", "Heimerdinger", "Irelia",
+        "Janna", "JarvanIV", "Jax", "Jayce", "Jinx", "Kalista", "Karma", "Karthus",
+        "Kassadin", "Katarina", "Kayle", "Kennen", "Khazix", "KogMaw", "Leblanc",
+        "LeeSin", "Leona", "Lissandra", "Lucian", "Lulu", "Lux", "Malphite",
+        "Malzahar", "Maokai", "MasterYi", "MissFortune", "MonkeyKing", "Mordekaiser",
+        "Morgana", "Nami", "Nasus", "Nautilus", "Nidalee", "Nocturne", "Nunu", "Olaf",
+        "Orianna", "Pantheon", "Poppy", "Quinn", "Rammus", "RekSai", "Renekton",
+        "Rengar", "Riven", "Rumble", "Ryze", "Sejuani", "Shaco", "Shen", "Shyvana",
+        "Singed", "Sion", "Sivir", "Skarner", "Sona", "Soraka", "Swain", "Syndra",
+        "TahmKench", "Talon", "Taric", "Teemo", "Thresh", "Tristana", "Trundle",
+        "Tryndamere", "TwistedFate", "Twitch", "Udyr", "Urgot", "Varus", "Vayne",
+        "Veigar", "Velkoz", "Vi", "Viktor", "Vladimir", "Volibear", "Warwick",
+        "Xerath", "XinZhao", "Yasuo", "Yorick", "Zac", "Zed", "Ziggs", "Zilean",
+        "Zyra"
       </div>
   </div>
 
-  <div class="row">
-  	<form align="center">
-  		<div class="col-xs-6 col-md-6">
-        <label class="radio-inline"><input type="radio" name="team" value="1">Blue Team</label>
-      </div>
-      <div class="col-xs-6 col-md-6">
-		    <label class="radio-inline"><input type="radio" name="team" value="2">Purple Team</label>
-      </div>
-	  </form>
-  </div><BR> 
-  	
-  <div class="row">
-    <div class="col-xs-6 col-md-6">
-      <!-- <h5 align="center"> blue side </h5>-->
-      <form class="form" align="center">
-          Champion 1: <input type="text" id="b1"><br>
-          Champion 2: <input type="text" id="b2"><br>
-          Champion 3: <input type="text" id="b3"><br>
-          Champion 4: <input type="text" id="b4"><br>
-          Champion 5: <input type="text" id="b5"><br>
-        </form>
-    </div> 
 
-    <div class="col-xs-6 col-md-6">
-      <!-- <h5 align="center"> purple side </h5> -->
-      <form class="form" align="center">
-          Champion 1: <input type="text" id="p1"><br>
-          Champion 2: <input type="text" id="p2"><br>
-          Champion 3: <input type="text" id="p3"><br>
-          Champion 4: <input type="text" id="p4"><br>
-          Champion 5: <input type="text" id="p5"><br>
-      </form>
-    </div>
-  </div> 
-  
-  <p>
-    <div class="text-center">
+  <div class="container-1">
+    <h1 align="center">Pick-Ban Optimizer</h1><BR></BR><BR></BR><BR></BR>
+    <div class="row" align="center">
+    	<!-- <form align="center"> -->
+    		<div class="col-xs-6 col-md-6">
+          <label class="radio-inline"><input type="radio" name="team" value="1">Blue Team</label>
+        </div>
+        <div class="col-xs-6 col-md-6">
+  		    <label class="radio-inline"><input type="radio" name="team" value="2">Purple Team</label>
+        </div>
+  	  <!-- </form> -->
+    </div><BR> 
+    
+    <div class="row">
+      <div class="col-xs-6 col-md-6">
+        <!-- <h5 align="center"> blue side </h5>-->
+        <form class="form" align="center">
+            Champion 1: <input type="text" id="b1"><br>
+            Champion 2: <input type="text" id="b2"><br>
+            Champion 3: <input type="text" id="b3"><br>
+            Champion 4: <input type="text" id="b4"><br>
+            Champion 5: <input type="text" id="b5"><br>
+          </form>
+      </div> 
+
+      <div class="col-xs-6 col-md-6">
+        <!-- <h5 align="center"> purple side </h5> -->
+        <form class="form" align="center">
+            Champion 1: <input type="text" id="p1"><br>
+            Champion 2: <input type="text" id="p2"><br>
+            Champion 3: <input type="text" id="p3"><br>
+            Champion 4: <input type="text" id="p4"><br>
+            Champion 5: <input type="text" id="p5"><br>
+        </form>
+      </div>
+    </div> 
+    
+    
+    <div class="text-center"><BR></BR><BR></BR><BR></BR>
       <button type="button" id="pick-indiv" class="btn btn-lg btn-default">Individual</button>
       <button type="button" id="pick-group" class="btn btn-lg btn-primary">Group</button>
       <button type="button" id="pick-rl" class="btn btn-lg btn-success">RL</button>
-    </div>
-  </p>
-	
+    </div> 
+    
+	</div>
 
-  <table class="table table-bordered">
-    <thead>
-      <tr><th>champion</th><th>pwin</th><th>numGames</th></tr>
-    </thead>
-    <tbody>
-    </tbody>
-  </table>
 
-<p> Available Champions <br>
-"Aatrox", "Ahri", "Akali", "Alistar", "Amumu", "Anivia", "Annie", "Ashe",
-"Azir", "Bard", "Blitzcrank", "Brand", "Braum", "Caitlyn", "Cassiopeia",
-"Chogath", "Corki", "Darius", "Diana", "Draven", "DrMundo", "Ekko", "Elise",
-"Evelynn", "Ezreal" "FiddleSticks", "Fiora", "Fizz", "Galio", "Gangplank",
-"Garen", "Gnar", "Gragas", "Graves", "Hecarim", "Heimerdinger", "Irelia",
-"Janna", "JarvanIV", "Jax", "Jayce", "Jinx", "Kalista", "Karma", "Karthus",
-"Kassadin", "Katarina", "Kayle", "Kennen", "Khazix", "KogMaw", "Leblanc",
-"LeeSin", "Leona", "Lissandra", "Lucian", "Lulu", "Lux", "Malphite",
-"Malzahar", "Maokai", "MasterYi", "MissFortune", "MonkeyKing", "Mordekaiser",
-"Morgana", "Nami", "Nasus", "Nautilus", "Nidalee", "Nocturne", "Nunu", "Olaf",
-"Orianna", "Pantheon", "Poppy", "Quinn", "Rammus", "RekSai", "Renekton",
-"Rengar", "Riven", "Rumble", "Ryze", "Sejuani", "Shaco", "Shen", "Shyvana",
-"Singed", "Sion", "Sivir", "Skarner", "Sona", "Soraka", "Swain", "Syndra",
-"TahmKench", "Talon", "Taric", "Teemo", "Thresh", "Tristana", "Trundle",
-"Tryndamere", "TwistedFate", "Twitch", "Udyr", "Urgot", "Varus", "Vayne",
-"Veigar", "Velkoz", "Vi", "Viktor", "Vladimir", "Volibear", "Warwick",
-"Xerath", "XinZhao", "Yasuo", "Yorick", "Zac", "Zed", "Ziggs", "Zilean",
-"Zyra"
-</p>
+    <table class="table table-bordered">
+      <thead>
+        <tr><th>Champion</th><th>Win Probability</th><th>Game Count</th></tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+
+
 
 </body> 
 </html>

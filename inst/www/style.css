@@ -36,3 +36,35 @@ nav a{
 	justify-content: center;
 	align-items: center;
 }
+
+.jumbotron{
+	margin-bottom: 0;
+}
+
+.container-1{
+	background-image: url("sky.jpg");
+	background-size: cover;
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+
+	height: 100%;
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/*align-items: center;*/
+}
+
+.table-bordered{
+	/*color: #fff;*/
+	background-color: #eee;
+	background-size: cover;
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+	text-align: center;
+}
+
+th {
+	text-align: center;
+}
