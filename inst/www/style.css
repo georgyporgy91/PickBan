@@ -28,7 +28,7 @@ nav a{
 	background-size: cover;
 	background-image: url("forestbridge.jpg");
 	background-repeat:no-repeat;
-	background-attachment: fixed;
+	/*background-attachment: fixed;*/
 
 	color: #fff;
 	display: flex;
@@ -45,7 +45,7 @@ nav a{
 	background-image: url("sky.jpg");
 	background-size: cover;
 	background-repeat:no-repeat;
-	background-attachment: fixed;
+	/*background-attachment: fixed;*/
 
 	height: 100%;
 	width: 100%;
