@@ -29,7 +29,11 @@ nav a{
 	background-image: url("forestbridge.jpg");
 	background-repeat:no-repeat;
 	background-attachment: fixed;
-
+	background-position: center center;
+/*	@media (max-width: @iphone-screen) {
+        background-attachment: scroll;
+    }
+*/
 	color: #fff;
 	display: flex;
 	flex-direction: column;
@@ -41,14 +45,15 @@ nav a{
 	margin-bottom: 0;
 }
 
-.container-1{
+.container-fluid{
+	height: 100%;
+	width: 100%;
+
 	background-image: url("sky.jpg");
 	background-size: cover;
 	background-repeat:no-repeat;
 	background-attachment: fixed;
-
-	height: 100%;
-	width: 100%;
+	background-position: center center;
 
 	display: flex;
 	flex-direction: column;
