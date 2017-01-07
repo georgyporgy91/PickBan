@@ -25,11 +25,10 @@ nav a{
 .sect{
 	height:100%;
 	width: 100%;
-	background-size: cover;
 	background-image: url("forestbridge.jpg");
-	background-repeat:no-repeat;
-	background-attachment: fixed;
-	z-index: -10;
+	background-size: cover;
+	/*background-attachment: fixed;*/
+	z-index: -1;
 	background-position: center center;
 
 	color: #fff;
@@ -49,8 +48,7 @@ nav a{
 
 	background-image: url("sky.jpg");
 	background-size: cover;
-	background-repeat:no-repeat;
-	background-attachment: fixed;
+	/*background-attachment: fixed;*/
 	background-position: center center;
 
 	display: flex;
@@ -63,8 +61,6 @@ nav a{
 	/*color: #fff;*/
 	background-color: #eee;
 	background-size: cover;
-	background-repeat:no-repeat;
-	background-attachment: fixed;
 	text-align: center;
 }
 
