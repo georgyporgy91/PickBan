@@ -27,6 +27,8 @@ nav a{
 	width: 100%;
 	background-size: cover;
 	background-image: url("forestbridge.jpg");
+	min-height:100%;
+	min-width:100%;
 	background-repeat:no-repeat;
 	background-attachment: fixed;
 	background-position: center center;
@@ -36,10 +38,6 @@ nav a{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-}
-
-@media (max-width: @iphone-screen) {
-    background-attachment: scroll;
 }
 
 .jumbotron{
