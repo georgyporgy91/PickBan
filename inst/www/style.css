@@ -30,10 +30,10 @@ nav a{
 	background-repeat:no-repeat;
 	background-attachment: fixed;
 	background-position: center center;
-/*	@media (max-width: @iphone-screen) {
+	@media (max-width: @iphone-screen) {
         background-attachment: scroll;
     }
-*/
+
 	color: #fff;
 	display: flex;
 	flex-direction: column;
