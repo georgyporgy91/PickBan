@@ -25,7 +25,7 @@ nav a{
 .sect{
 	height:100%;
 	width: 100%;
-	background-image: url("forestbridge.jpg");
+	background-image: url("pic/forestbridge.jpg");
 	background-size: cover;
 	/*background-attachment: fixed;*/
 	z-index: -1;
@@ -42,11 +42,11 @@ nav a{
 	margin-bottom: 0;
 }
 
-.container-fluid{
+.optimizer-1{
 	height: 100%;
 	width: 100%;
 
-	background-image: url("sky.jpg");
+	background-image: url("pic/sky.jpg");
 	background-size: cover;
 	/*background-attachment: fixed;*/
 	background-position: center center;
@@ -57,11 +57,21 @@ nav a{
 	/*align-items: center;*/
 }
 
+.contact-1 { 
+	height: 30%;
+    background-color: #474e5d; /* Dark Blue */
+    color: #ffffff;
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
 .table-bordered{
 	/*color: #fff;*/
 	background-color: #eee;
 	background-size: cover;
 	text-align: center;
+	margin-bottom: 0;
 }
 
 th {

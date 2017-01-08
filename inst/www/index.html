@@ -5,30 +5,37 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> PickBan Optimizer </title>
-  <link href="bootstrap.min.css" rel="stylesheet">
-  <script src="jquery.min.js"></script>
-  <script src="bootstrap.min.js"></script>
-  <script src="opencpu.js"></script>
+  
+  <title>PickBan Optimizer</title>
+
+  <!-- CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- JS -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/opencpu.js"></script>
+  <!-- Custom -->
   <script src="app.js"></script>
-  <link rel="stylesheet" href="style.css">
+  <link href="style.css" rel="stylesheet">
+
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
 
   <nav>
-    <a href="#">HOME</a>
-    <a href="#">ABOUT</a>
-    <a href="#">CONTACT</a>
+    <a href="#HOME">HOME</a>
+    <a href="#INTRODUCTION">INTRODUCTION</a>
+    <a href="#OPTIMIZER">OPTIMIZER</a>
+    <a href="#CONTACT">CONTACT</a>
   </nav>
 
-  <div class="sect">
+  <div class="sect" id="HOME">
     <h1>LoL Pick-Ban Optimizer</h1>
     <h3>v0.1</h3>
   </div>
         
 
-  <div class="jumbotron">
+  <div class="jumbotron" id="INTRODUCTION">
       <div class="container">
         
         <p>This project is an attempt to optimize the pick-ban process in League of Legends using statistics. The inputs are the current status of the pick-ban screen, and outputs are champions available for your next pick, ordered by predicted win rate. </p>
@@ -56,7 +63,7 @@
   </div>
 
 
-  <div class="container-fluid">
+  <div class="container-fluid optimizer-1" id="OPTIMIZER">
     <h1 align="center">Pick-Ban Optimizer</h1><BR><BR><BR>
     <div class="row" align="center">
     	<!-- <form align="center"> -->
@@ -103,13 +110,27 @@
 	</div>
 
 
-    <table class="table table-bordered">
-      <thead>
-        <tr><th>Champion</th><th>Win Probability</th><th>Game Count</th></tr>
-      </thead>
-      <tbody>
-      </tbody>
-    </table>
+<img src="pic/spinner.gif"s id="spinner" style="display:none"/>
+
+<table class="table table-bordered">
+  <thead>
+    <tr><th>Champion</th><th>Win Probability</th><th>Game Count</th></tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+
+<div class="container-fluid contact-1", id="CONTACT">
+  <h3>CONTACT</h3>
+  <p>My name is George Wang, currently working as a data scientist in the FinTech space. I like to work on eSports analytics related projects during my free time. Feel free to reach out with any questions or comments.</p>
+
+  <p><span class="glyphicon glyphicon-home"></span>
+  New York, NY</p>
+  <p><span class="glyphicon glyphicon-envelope"></span> georgyporgy91@gmail.com</p> 
+  <p><span class="glyphicon glyphicon-share-alt"></span> 
+  <a href="https://www.linkedin.com/in/gwang16">LinkedIn</a></p>
+</div>
+
 
 
 

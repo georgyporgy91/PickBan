@@ -7,6 +7,8 @@ $(document).ready(function() {
 		
 		console.log($(":checked").val() == "1")
 
+		$('#spinner').show(); //<----here
+	
 		if($(":checked").val() == "1"){
 			var mydata = [{friendly : $("#b1").val(), opponent: $("#p1").val()}, 
 			{friendly : $("#b2").val(), opponent: $("#p2").val()},
@@ -29,13 +31,14 @@ $(document).ready(function() {
 	      		var html = "<tr><td>" + value.champion + "</td><td>" + value.pwin + "</td><td>" + value.numGames + "</td></tr>";
 	      		$("tbody").append(html);
 			});
+			$('#spinner').hide();  //<--- hide again
 		});
 
-		  //optional
-		  req.fail(function(){
-		    alert("R returned an error: " + req.responseText); 
-		  });
-
+	  //optional
+	  req.fail(function(){
+	    alert("R returned an error: " + req.responseText); 
+	  });
+		  
 	});
 
 
